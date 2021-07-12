@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace People.Service.Models
 {
-    public class StaticPeopleProvider : IPeopleProvider
+    public class HardCodedPeopleProvider : IPeopleProvider
     {
         public List<Person> GetPeople()
         {

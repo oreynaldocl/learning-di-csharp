@@ -17,8 +17,8 @@ namespace PeopleViewer.Presentation
             get { return _people; }
             set
             {
-                if (_people == value)
-                    return;
+                if (_people == value) return;
+
                 _people = value;
                 RaisePropertyChanged();
             }

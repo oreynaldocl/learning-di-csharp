@@ -1,11 +1,14 @@
-﻿using PeopleViewer.Presentation;
-using System.Windows;
+﻿using System.Windows;
+using PeopleViewer.Presentation;
 
 namespace PeopleViewer
 {
+    /// <summary>
+    /// Interaction logic for PeopleViewerWindow.xaml
+    /// </summary>
     public partial class PeopleViewerWindow : Window
     {
-        PeopleViewModel viewModel;
+        readonly PeopleViewModel viewModel;
 
         public PeopleViewerWindow()
         {

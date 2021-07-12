@@ -63,19 +63,14 @@ namespace PeopleViewer
         {
             int decade = (((DateTime)value).Year / 10) * 10;
 
-            switch (decade)
+            return decade switch
             {
-                case 1970:
-                    return new SolidColorBrush(Colors.Maroon);
-                case 1980:
-                    return new SolidColorBrush(Colors.DarkGreen);
-                case 1990:
-                    return new SolidColorBrush(Colors.DarkSlateBlue);
-                case 2000:
-                    return new SolidColorBrush(Colors.CadetBlue);
-                default:
-                    return new SolidColorBrush(Colors.DarkSlateGray);
-            }
+                1970 => new SolidColorBrush(Colors.Maroon),
+                1980 => new SolidColorBrush(Colors.DarkGreen),
+                1990 => new SolidColorBrush(Colors.DarkSlateBlue),
+                2000 => new SolidColorBrush(Colors.CadetBlue),
+                _ => new SolidColorBrush(Colors.DarkSlateGray),
+            };
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -83,4 +78,5 @@ namespace PeopleViewer
             throw new NotImplementedException();
         }
     }
+
 }

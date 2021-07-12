@@ -1,30 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using PeopleViewer.Common;
 using Microsoft.AspNetCore.Mvc;
 using People.Service.Models;
-using PeopleViewer.Common;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace People.Service.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class PeopleController : ControllerBase
     {
-        IPeopleProvider provider;
+        readonly IPeopleProvider provider;
 
         public PeopleController(IPeopleProvider provider)
         {
             this.provider = provider;
         }
 
-        // GET api/values
+        // GET api/people
         [HttpGet]
         public IEnumerable<Person> Get()
         {
             return provider.GetPeople();
         }
 
-        // GET api/values/5
+        // GET api/people/5
         [HttpGet("{id}")]
         public Person Get(int id)
         {

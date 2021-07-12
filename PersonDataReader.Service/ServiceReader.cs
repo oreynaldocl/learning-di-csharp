@@ -7,8 +7,8 @@ namespace PersonDataReader.Service
 {
     public class ServiceReader
     {
-        WebClient client = new WebClient();
-        string baseUri = "http://localhost:9874/api/people";
+        readonly WebClient client = new WebClient();
+        readonly string baseUri = "http://localhost:9874/api/people";
 
         public IEnumerable<Person> GetPeople()
         {
