@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using PeopleViewer.Presentation;
-using PersonDataReader.Service;
+using PersonDataReader.CSV;
 
 namespace PeopleViewer
 {
@@ -19,7 +19,7 @@ namespace PeopleViewer
 
         private static void ComposeObjects()
         {
-            var reader = new ServiceReader();
+            var reader = new CSVReader();
             var viewModel = new PeopleViewModel(reader);
             Application.Current.MainWindow = new PeopleViewerWindow(viewModel);
         }
