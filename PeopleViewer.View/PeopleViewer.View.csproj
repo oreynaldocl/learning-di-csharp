@@ -1,17 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyName>PeopleViewer</AssemblyName>
-    <RootNamespace>PeopleViewer</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PeopleViewer.Common\PeopleViewer.Common.csproj" />
     <ProjectReference Include="..\PeopleViewer.Presentation\PeopleViewer.Presentation.csproj" />
-    <ProjectReference Include="..\PeopleViewer.View\PeopleViewer.View.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PeopleViewerWindow.xaml.cs">
+      <DependentUpon>PeopleViewerWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="PeopleViewerWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
