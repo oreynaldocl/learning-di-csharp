@@ -35,11 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonReader.Caching", "Per
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7C7E0D8C-27F8-4D95-871C-E6FC58AFF333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Presentation.Tests", "PeopleViewer.Presentation.Tests\PeopleViewer.Presentation.Tests.csproj", "{063C0A4C-CF9B-4927-A11D-F5F339E4DF04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleViewer.Presentation.Tests", "PeopleViewer.Presentation.Tests\PeopleViewer.Presentation.Tests.csproj", "{063C0A4C-CF9B-4927-A11D-F5F339E4DF04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDataReader.CSV.Tests", "PersonDataReader.CSV.Tests\PersonDataReader.CSV.Tests.csproj", "{6F2AA162-6D39-4610-BF62-837E91A23F5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonDataReader.CSV.Tests", "PersonDataReader.CSV.Tests\PersonDataReader.CSV.Tests.csproj", "{6F2AA162-6D39-4610-BF62-837E91A23F5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Ninject", "PeopleViewer.Ninject\PeopleViewer.Ninject.csproj", "{40438122-982D-4E48-BEB7-E2F54ECE20A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleViewer.Ninject", "PeopleViewer.Ninject\PeopleViewer.Ninject.csproj", "{40438122-982D-4E48-BEB7-E2F54ECE20A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Autofac", "PeopleViewer.Autofac\PeopleViewer.Autofac.csproj", "{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{40438122-982D-4E48-BEB7-E2F54ECE20A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40438122-982D-4E48-BEB7-E2F54ECE20A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40438122-982D-4E48-BEB7-E2F54ECE20A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,7 @@ Global
 		{063C0A4C-CF9B-4927-A11D-F5F339E4DF04} = {7C7E0D8C-27F8-4D95-871C-E6FC58AFF333}
 		{6F2AA162-6D39-4610-BF62-837E91A23F5E} = {7C7E0D8C-27F8-4D95-871C-E6FC58AFF333}
 		{40438122-982D-4E48-BEB7-E2F54ECE20A7} = {15C7047A-450E-4269-9F29-96EC321EA848}
+		{1BED1361-CDFB-4363-BF2A-AAF5B38BF5F2} = {15C7047A-450E-4269-9F29-96EC321EA848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCF92DCF-3599-4010-BB06-FFF5E0A25037}
