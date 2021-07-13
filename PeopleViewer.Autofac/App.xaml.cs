@@ -4,6 +4,7 @@ using PeopleViewer.Common;
 using PeopleViewer.Presentation;
 using PersonDataReader.CSV;
 using PersonDataReader.Service;
+using PersonReader.Caching;
 using System.Windows;
 
 namespace PeopleViewer.Autofac
@@ -27,7 +28,11 @@ namespace PeopleViewer.Autofac
         private void ConfigureContainer()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<CSVReader>().As<IPersonReader>().SingleInstance();
+            builder.RegisterType<ServiceReader>().Named<IPersonReader>("reader").SingleInstance();
+
+            builder.RegisterDecorator<IPersonReader>(
+                (c, inner) => new CachingReader(inner), fromKey: "reader" 
+            );
 
             builder.RegisterType<PeopleViewerWindow>().InstancePerDependency();
             builder.RegisterType<PeopleViewModel>().InstancePerDependency();
