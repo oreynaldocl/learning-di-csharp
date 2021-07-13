@@ -10,11 +10,11 @@ namespace PeopleViewer
     {
         readonly PeopleViewModel viewModel;
 
-        public PeopleViewerWindow()
+        public PeopleViewerWindow(PeopleViewModel _viewModel)
         {
             InitializeComponent();
-            viewModel = new PeopleViewModel();
-            this.DataContext = viewModel;
+            viewModel = _viewModel;
+            DataContext = viewModel;
         }
 
         private void FetchButton_Click(object sender, RoutedEventArgs e)
